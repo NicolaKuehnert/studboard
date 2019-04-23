@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="studboard:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/studboard_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="studboard/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="studboard" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
