@@ -31,21 +31,18 @@
 
 </div>
 
-<form>
-    <input type="text" id="Artikelart"  list="art">
-    <datalist id="art">
-        <option value="News"/>
-        <option value="Projekt"/>
-        <option value="Aufgabe"/>
-    </datalist><br>
-    <input type="text" id="titel"><br>
-    <textarea rows="10" cols ="50" id="inhalt">Inhalt</textarea><br>
-    <input type="date" id="start"><br>
-    <input type="date" id="end"><br>
-    <input type="text" id="kategorie"><br>
-    <textarea rows="3" cols ="50" id="quelle">Quellen</textarea><br>
-    <input type="color" id="farbe" value="#000000">
-    <button onclick="newArticle()">Absenden</button>
+<form action="http://localhost:63342/studboard/index.html" method="POST" enctype="multipart/form-data">
+    Ziel: <select name="ziel">
+        <option value="schoen">Schön</option>
+        <option value="lauffaehig">Lauffähig</option>
+    </select><br>
+    Titel: <input type="text" name="titel"><br>
+    <textarea rows="3" cols="50" name="kurz">Kurzbeschreibung</textarea><br>
+    <textarea rows="10" cols ="50" name="lang">Langbeschreibung</textarea><br>
+    Startdatum: <input type="date" id="start" name="start"><br>
+    Enddatum: <input type="date" id="end" name="end"><br>
+    Logo: <input type="file" name="logo">
+    <input type="submit" VALUE="Submit"/>
 </form>
 </div>
 
