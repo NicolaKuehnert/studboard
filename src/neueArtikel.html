@@ -10,8 +10,13 @@
 <body>
 <header>
     <section>
-        <!-- TODO Hier müssten wir die Größe des Fensters berücksichtigen         -->
-        <img src="Praktikum Dateien/header1280x133.png" alt="header">
+        <!-- DONE Hier müssten wir die Größe des Fensters berücksichtigen         -->
+        <picture>
+            <source media="(min-width:1920px)" srcset="Praktikum%20Dateien/header1920x200.png">
+            <source media="(min-width:1280px)" srcset="Praktikum%20Dateien/header1280x133.png">
+            <source media="(min-width:640px)" srcset="Praktikum%20Dateien/header640x67.png">
+            <img src="Praktikum%20Dateien/header320x34.png">
+        </picture>
     </section>
 
 
@@ -52,9 +57,14 @@
     <br><a href="registrieren.html">Neu Registrieren</a>
 </div>
 
-<!--TODO Text zu Links machen-->
+<!--TODO Button zum laufen bringen-->
 <footer>
-    Copyright Kontakt Impressum Datenschutzerklärung Haftungsausschluss "Back to Top Link"
+    <a href="copyright.html">Copyright</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html"></a>
+    <a href="haftung.html">Haftungsausschluss</a>
+    <button onclick="topFunction()" id="myBtn" title="Back to top">Anfang der Seite</button>
 </footer>
 
 </body>
