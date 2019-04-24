@@ -19,55 +19,92 @@
         </picture>
     </section>
 </header>
+<div style="position: relative; min-height:100vh" id="top">
+    <div style="padding-bottom: 2.5rem">
+        <!-- DONE Menüleiste          -->
+        <div style="height: 10%">
 
-<!-- DONE Menüleiste          -->
-<div style="height: 10%">
+            <a href="index.html"><i class="glyphicon glyphicon-home" style="padding: 20px"></i></a>
+            <a id="projectuebersicht" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a>
+            <a id="newArticle_menu" href="neueArtikel.html" style="padding: 20px">Neues Projekt</a>
 
-    <a href="index.html"><i class="glyphicon glyphicon-home" style="padding: 20px"></i></a></li>
-    <a id="projectuebersicht" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a></li>
-    <a id="newArticle_menu" href="neueArtikel.html" style="padding: 20px">Neues Projekt</a></li>
+        </div>
 
+        <nav>
+            <ul>
+                <a href="#kurzbeschreibung">Kurzbeschreibung von Projekt 2</a> |
+                <a href="#langbeschreibung">Langbeschreibung von Projekt 2</a> |
+                <a href="#projektziele">Projektziele von Projekt 2</a>
+            </ul>
+        </nav>
+
+        <section>
+            <article>
+                <img src="Praktikum%20Dateien/Projektlogo.png" alt="Hier sollte das Projektlogo stehen">
+                <header>
+                    <h3>Projekt 2</h3>
+                    Projektleiter: Schapansky
+                </header>
+                <div style="width: 90%" id="kurzbeschreibung">
+                    <p>tema tis rolod muspi meroL tse sutcnas atamikat aes on ,nergrebug dsak atilc tetS .muber ae te
+                        serolod oud otsuj te masucca te soe orev tA</p>
+                </div>
+                <div style="width: 90%" id="langbeschreibung">
+                    <p>.tema tis rolod muspi meroL tse sutcnas atamikat aes on ,nergrebug dsak atilc tetS .muber ae te
+                        serolod oud otsuj te masucca te soe orev tA .autpulov maid des ,tare mayuqila angam erolod te
+                        erobal tu tnudivni ropmet domrie ymunon maid des ,rtile gnicspidas rutetesnoc ,tema tis rolod
+                        muspi meroL .tema tis rolod muspi meroL tse sutcnas atamikat aes on ,nergrebug dsak atilc tetS
+                        .muber ae te serolod oud otsuj te masucca te soe orev tA .autpulov maid des ,tare mayuqila angam
+                        erolod te erobal tu tnudivni ropmet domrie ymunon maid des ,rtile gnicspidas rutetesnoc ,tema
+                        tis rolod muspi meroL</p>
+                </div>
+                <div style="width: 90%" id="projektziele">
+                    <p>Projektziele</p>
+                    <ol>
+                        <li>Schön</li>
+                        <BR>
+                        <li>Lauffähig</li>
+                        <BR>
+                    </ol>
+                </div>
+            </article>
+        </section>
+
+        <form action="leereseite.html" method="POST">
+            Kommentar zum Projekt <input type="text" name="Kommentar" value=""><br>
+            Note fürs Projekt
+            <select name="note" size="1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br><input type="submit" value="Speichern">
+        </form>
+
+        <!--DONE Anmeldeformular -->
+        <div>
+            <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
+                Name <input type="text" name="username"/><br>
+                Passwort <input type="password" name="password"><br>
+
+                <input type="submit" value="Submit"/>
+            </form>
+
+
+            <br><a href="registrieren.html">Neu Registrieren</a>
+        </div>
+    </div>
+    <!--DONE Button zum laufen bringen-->
+    <footer style="position: absolute; bottom: 0px; width: 100%; height: 30px">
+        <a href="copyright.html">Copyright</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="haftung.html">Haftungsausschluss</a>
+        <a href="#top">Anfang der Seite</a>
+    </footer>
 </div>
-
-<section>
-    <article>
-        <img src="Praktikum%20Dateien/Projektlogo.png" alt="Hier sollte das Projektlogo stehen">
-        <header>
-            <h3>Projekt 2</h3>
-            Projektleiter: Schapansky
-        </header>
-        <div style="width: 90%">
-            <p>tema tis rolod muspi meroL tse sutcnas atamikat aes on ,nergrebug dsak atilc tetS .muber ae te serolod oud otsuj te masucca te soe orev tA</p>
-        </div>
-        <div style="width: 90%">
-            <p>.tema tis rolod muspi meroL tse sutcnas atamikat aes on ,nergrebug dsak atilc tetS .muber ae te serolod oud otsuj te masucca te soe orev tA .autpulov maid des ,tare mayuqila angam erolod te erobal tu tnudivni ropmet domrie ymunon maid des ,rtile gnicspidas rutetesnoc ,tema tis rolod muspi meroL .tema tis rolod muspi meroL tse sutcnas atamikat aes on ,nergrebug dsak atilc tetS .muber ae te serolod oud otsuj te masucca te soe orev tA .autpulov maid des ,tare mayuqila angam erolod te erobal tu tnudivni ropmet domrie ymunon maid des ,rtile gnicspidas rutetesnoc ,tema tis rolod muspi meroL</p>
-        </div>
-        <div style="width: 90%">
-            <p>Projektziele</p>
-            <ol>
-                <li>Schön</li> <BR>
-                <li>Lauffähig</li> <BR>
-            </ol>
-        </div>
-    </article>
-</section>
-
-<!--TODO Anmeldeformular -->
-<div style="position: absolute; bottom: 30px;" >
-    Name
-    Passwort
-
-    <br><a href="registrieren.html">Neu Registrieren</a>
-</div>
-
-<!--TODO Button zum laufen bringen-->
-<footer style="position: absolute; bottom: 0px; width: 100%; height: 30px">
-    <a href="copyright.html">Copyright</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutzerklärung</a>
-    <a href="haftung.html">Haftungsausschluss</a>
-    <button onclick="topFunction()" id="myBtn" title="Back to top">Anfang der Seite</button>
-</footer>
 </body>
 </html>

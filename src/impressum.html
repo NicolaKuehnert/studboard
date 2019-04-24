@@ -21,37 +21,59 @@
 
 
 </header>
+<div style="position: relative; min-height:100vh" id="top">
+    <div style="padding-bottom: 2.5rem">
 
-<!-- DONE Menüleiste          -->
-<div style="height: 10%">
+        <!-- DONE Menüleiste          -->
+        <div style="height: 10%">
 
-    <a href="index.html"><i class="glyphicon glyphicon-home" style="padding: 20px"></i></a></li>
-    <a id="projectuebersicht" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a></li>
-    <a id="newArticle_menu" href="neueArtikel.html" style="padding: 20px">Neues Projekt</a></li>
+            <a href="index.html"><i class="glyphicon glyphicon-home" style="padding: 20px"></i></a>
+            <a id="projectuebersicht" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a>
+            <a id="newArticle_menu" href="neueArtikel.html" style="padding: 20px">Neues Projekt</a>
 
+        </div>
+
+        <div>
+            Fachhochschule Bielefeld<br>
+            Interaktion 1<br>
+            D-33619 Bielefeld<br>
+            Deutschland<br><br>
+
+            Postfach: 10 11 13<br>
+            D-33511 Bielefeld<br><br>
+
+            Telefon +49.521.106-01<br>
+            Telefax +49.521.106-7790<br>
+            info@fh-bielefeld.de<br>
+            www.fh-bielefeld.de<br>
+
+
+        </div>
+
+        <!--DONE Anmeldeformular -->
+        <div>
+            <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
+                Name <input type="text" name="username"/><br>
+                Passwort <input type="password" name="password"><br>
+
+                <input type="submit" value="Submit"/>
+            </form>
+
+
+            <br><a href="registrieren.html">Neu Registrieren</a>
+        </div>
+
+    </div>
+    <!--DONE Button zum laufen bringen-->
+    <footer style="position: absolute; bottom: 0px; width: 100%; height: 30px">
+        <a href="copyright.html">Copyright</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="haftung.html">Haftungsausschluss</a>
+        <a href="#top">Anfang der Seite</a>
+    </footer>
 </div>
-
-<div>
-    Every dog needs a leash
-</div>
-
-<!--TODO Anmeldeformular -->
-<div style="position: absolute; bottom: 30px;" >
-    Name
-    Passwort
-
-    <br><a href="registrieren.html">Neu Registrieren</a>
-</div>
-
-<!--TODO Button zum laufen bringen-->
-<footer style="position: absolute; bottom: 0px; width: 100%; height: 30px">
-    <a href="copyright.html">Copyright</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutzerklärung</a>
-    <a href="haftung.html">Haftungsausschluss</a>
-    <button onclick="topFunction()" id="myBtn" title="Back to top">Anfang der Seite</button>
-</footer>
 
 </body>
 </html>

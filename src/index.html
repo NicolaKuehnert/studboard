@@ -1,79 +1,84 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <title>StudBoard</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>StudBoard</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    </head>
-    <body>
-        <header>
-           <section>
-               <!-- DONE Hier müssten wir die Größe des Fensters berücksichtigen         -->
-               <picture>
-                   <source media="(min-width:1920px)" srcset="Praktikum%20Dateien/header1920x200.png">
-                   <source media="(min-width:1280px)" srcset="Praktikum%20Dateien/header1280x133.png">
-                   <source media="(min-width:640px)" srcset="Praktikum%20Dateien/header640x67.png">
-                   <img src="Praktikum%20Dateien/header320x34.png">
-               </picture>
-           </section>
+</head>
+<body>
+<header>
+    <section>
+        <!-- DONE Hier müssten wir die Größe des Fensters berücksichtigen         -->
+        <picture>
+            <source media="(min-width:1920px)" srcset="Praktikum%20Dateien/header1920x200.png">
+            <source media="(min-width:1280px)" srcset="Praktikum%20Dateien/header1280x133.png">
+            <source media="(min-width:640px)" srcset="Praktikum%20Dateien/header640x67.png">
+            <img src="Praktikum%20Dateien/header320x34.png">
+        </picture>
+    </section>
 
 
-        </header>
-        
+</header>
+<div id="top" style="position: relative; min-height:100vh">
+    <div style="padding-bottom: 2.5rem">
         <!-- DONE Menüleiste          -->
         <div style="height: 10%">
 
-            <a href="index.html"><i class="glyphicon glyphicon-home" style="padding: 20px"></i></a></li>
-            <a id="projectuebersicht" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a></li>
-            <a id="newArticle_menu" href="neueArtikel.html" style="padding: 20px">Neues Projekt</a></li>
+            <a href="index.html"><i class="glyphicon glyphicon-home" style="padding: 20px"></i></a>
+            <a id="projectuebersicht" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a>
+            <a id="newArticle_menu" href="neueArtikel.html" style="padding: 20px">Neues Projekt</a>
 
         </div>
 
-        <!-- TODO Begrüßung -->
+        <!-- DONE Begrüßung -->
         <div style="padding: 10px">
             <h1>Willkommen im StudBoard. <br> Hier gibt es Motivation für Studierende!</h1>
         </div>
 
-        <!-- TODO Video -->
+        <!-- DONE Video -->
         <div style="padding: 20px">
             <h3>Worum geht es?</h3>
             Hier geht es darum, deine Projekte während dem Studium im Blick zu haben.
 
-            <video width="1280" height="720" controls style="padding: 10px">
+            <video controls height="720" style="padding: 10px" width="1280">
                 <source src="Praktikum%20Dateien/video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
 
-        <!-- TODO Neue Projekte -->
+        <!-- DONE Neue Projekte -->
         <div style="padding: 20px;">
             <h4>Das sind die neusten Projekte:</h4>
-            <section style="padding: 20px">
-                <article>
-                    Projekt Daten kommen hier bald!
-                </article>
+            <section style="padding-bottom: 20px">
+                <br><a href="Projekt1.html">Projekt 1</a>
+                <br><a href="Projekt2.html">Projekt 2</a>
             </section>
         </div>
 
-        <!--TODO Anmeldeformular -->
-        <div style="position: absolute; bottom: 30px;" >
-            Name
-            Passwort
+        <!--DONE Anmeldeformular -->
+        <div>
+            <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
+                Name <input type="text" name="username"/><br>
+                Passwort <input type="password" name="password"><br>
+
+                <input type="submit" value="Submit"/>
+            </form>
+
 
             <br><a href="registrieren.html">Neu Registrieren</a>
         </div>
-
-        <!--TODO Button zum laufen bringen-->
-        <footer style="position: absolute; bottom: 0px; width: 100%; height: 30px">
-            <a href="copyright.html">Copyright</a>
-            <a href="kontakt.html">Kontakt</a>
-            <a href="impressum.html">Impressum</a>
-            <a href="datenschutz.html">Datenschutzerklärung</a>
-            <a href="haftung.html">Haftungsausschluss</a>
-            <button onclick="topFunction()" id="myBtn" title="Back to top">Anfang der Seite</button>
-        </footer>
-    
-    </body>
+    </div>
+    <!--DONE Button zum laufen bringen-->
+    <footer style="position: absolute; bottom: 0px; width: 100%; height: 30px">
+        <a href="copyright.html">Copyright</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="haftung.html">Haftungsausschluss</a>
+        <a href="#top">Anfang der Seite</a>
+    </footer>
+</div>
+</body>
 </html>
