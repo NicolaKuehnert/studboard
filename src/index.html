@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <title>StudBoard</title>
     <meta charset="UTF-8">
@@ -8,7 +9,7 @@
 
 </head>
 <body>
-<header>
+<header id="top">
     <section>
         <!-- DONE Hier müssten wir die Größe des Fensters berücksichtigen         -->
         <picture>
@@ -21,10 +22,10 @@
 
 
 </header>
-<div id="top" style="position: relative; min-height:100vh">
-    <div style="padding-bottom: 2.5rem">
+<div id="main-div">
+    <div id="second-div">
         <!-- DONE Menüleiste          -->
-        <div style="height: 10%">
+        <div id="menu-div">
 
             <a href="index.html"><i class="glyphicon glyphicon-home" style="padding: 20px"></i></a>
             <a id="projectuebersicht" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a>
@@ -33,25 +34,25 @@
         </div>
 
         <!-- DONE Begrüßung -->
-        <div style="padding: 10px">
+        <div id="topic">
             <h1>Willkommen im StudBoard. <br> Hier gibt es Motivation für Studierende!</h1>
         </div>
 
         <!-- DONE Video -->
-        <div style="padding: 20px">
+        <div>
             <h3>Worum geht es?</h3>
             Hier geht es darum, deine Projekte während dem Studium im Blick zu haben.
 
-            <video controls height="720" style="padding: 10px" width="1280">
+            <video id="drone" controls height="720" width="1280">
                 <source src="Praktikum%20Dateien/video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
 
         <!-- DONE Neue Projekte -->
-        <div style="padding: 20px;">
+        <div style="">
             <h4>Das sind die neusten Projekte:</h4>
-            <section style="padding-bottom: 20px">
+            <section id="projekt-liste">
                 <br><a href="Projekt1.html">Projekt 1</a>
                 <br><a href="Projekt2.html">Projekt 2</a>
             </section>
@@ -71,7 +72,7 @@
         </div>
     </div>
     <!--DONE Button zum laufen bringen-->
-    <footer style="position: absolute; bottom: 0px; width: 100%; height: 30px">
+    <footer>
         <a href="copyright.html">Copyright</a>
         <a href="kontakt.html">Kontakt</a>
         <a href="impressum.html">Impressum</a>
