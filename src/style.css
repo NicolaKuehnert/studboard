@@ -1,13 +1,20 @@
+#body {
+margin: 0px;
+}
+
+
+
 #main-div {
     position: relative;
     min-height:100vh;
-    padding: 20px;
+    padding: 0px;
     background-color: cornsilk;
 }
 
 #menu-div{
     height: 10%;
-    background-color: cornsilk;
+    background-color: black;
+    border-top: 3px solid #00BFFF;
 }
 
 #second-div{
