@@ -33,6 +33,19 @@
 
         </div>
 
+        <!--DONE Anmeldeformular -->
+        <div id="login">
+            <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
+                Name <input type="text" name="username"/><br>
+                Passwort <input type="password" name="password"><br>
+
+                <input type="submit" value="Submit"/>
+            </form>
+
+
+            <br><a href="registrieren.html">Neu Registrieren</a>
+        </div>
+
         <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="multipart/form-data">
             Ziel: <select name="ziel">
             <option value="schoen">Schön</option>
@@ -47,19 +60,6 @@
             Logo: <input type="file" name="logo">
             <input type="submit" VALUE="Submit"/>
         </form>
-    </div>
-
-    <!--DONE Anmeldeformular -->
-    <div>
-        <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
-            Name <input type="text" name="username"/><br>
-            Passwort <input type="password" name="password"><br>
-
-            <input type="submit" value="Submit"/>
-        </form>
-
-
-        <br><a href="registrieren.html">Neu Registrieren</a>
     </div>
 
 </div>

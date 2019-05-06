@@ -2,7 +2,10 @@
 margin: 0px;
 }
 
-
+header{
+    height: 20%;
+    background-color: cornsilk;
+}
 
 #main-div {
     position: relative;
@@ -12,7 +15,7 @@ margin: 0px;
 }
 
 #menu-div{
-    height: 10%;
+    height: 15%;
     background-color: black;
     border-top: 3px solid #00BFFF;
     font-size: 150%;
@@ -114,9 +117,9 @@ footer a:link{
 {
     background-color: cornsilk;
     position: absolute;
-    top: 100px;
-    right: 100px;
-
+    top: 5px;
+    right: 5px;
+    padding: 5px;
 }
 
 #top_link{
