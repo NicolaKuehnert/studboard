@@ -1,10 +1,35 @@
-#body {
-margin: 0px;
-}
-
 header{
     height: 20%;
     background-color: cornsilk;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer a:link{
+    color: white;
+    text-decoration: none;
+
+}
+
+a:link{
+    color: white;
+}
+
+a:link:hover{
+    background-color: #87CEFA;
+    text-decoration: none;
+}
+
+#body {
+    margin: 0px;
 }
 
 #main-div {
@@ -48,39 +73,6 @@ menu-div:link{
 
 }
 
-.row{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column{
-    float: left;
-    width: 50%;
-    padding: 15px;
-}
-
-
-
-.line1{
-    animation: fadeout 10s;
-    color: black;
-}
-
-@keyframes fadeout {
-    from {color: red;}
-    to {color: black;}
-}
-
-.line2{
-    animation: fadein 15s;
-}
-
-@keyframes fadein {
-    from { color: black; }
-    to   { color: red; }
-}
-
 #drone{
     padding: 10px;
     background-color: cornsilk;
@@ -88,26 +80,6 @@ menu-div:link{
     width: available;
 }
 
-footer{
-    position: absolute;
-    bottom: 0;
-    width: 90%;
-    height: 30px;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-
-footer a:link{
-    color: white;
-    text-decoration: none;
-
-}
-
-#zumseitenanfang{
-    position: fixed; bottom: 60px; right: 60px;
-    background-color: cornsilk;
-}
 #projekt-liste{
     padding-bottom: 20px;
     background-color: cornsilk;
@@ -150,4 +122,35 @@ footer a:link{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
+}
+
+.row{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+.line1{
+    animation: fadeout 10s;
+    color: black;
+}
+
+@keyframes fadeout {
+    from {color: red;}
+    to {color: black;}
+}
+
+.line2{
+    animation: fadein 15s;
+}
+
+@keyframes fadein {
+    from { color: black; }
+    to   { color: red; }
 }

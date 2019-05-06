@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="projekt.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>StudBoard</title>
     <meta charset="UTF-8">
@@ -19,7 +20,19 @@
             <img src="Praktikum%20Dateien/header320x34.png">
         </picture>
     </section>
+    <!--DONE Anmeldeformular -->
+    <div id="login">
+        <form action="http://localhost:63342/studboard/leereseite.html" method="POST"
+              enctype="application/x-www-form-urlencoded">
+            Name <input type="text" name="username"/><br>
+            Passwort <input type="password" name="password"><br>
 
+            <input type="submit" value="Submit"/>
+        </form>
+
+
+        <br><a href="registrieren.html">Neu Registrieren</a>
+    </div>
 
 
 </header>
@@ -33,61 +46,51 @@
 
         </div>
 
-        <!--DONE Anmeldeformular -->
-        <div id="login">
-            <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
-                Name <input type="text" name="username"/><br>
-                Passwort <input type="password" name="password"><br>
 
-                <input type="submit" value="Submit"/>
-            </form>
+        <!-- DONE Unsortierte Projektliste         -->
+        <ul>
+            <h3>Inhalt</h3>
+            <br><a href="Projekt1.html">Projekt 1</a>
+            <br><a href="Projekt2.html">Projekt 2</a>
+        </ul>
 
 
-            <br><a href="registrieren.html">Neu Registrieren</a>
+        <div class="projekte">
+            <section>
+                <article>
+                    <header>
+                        <h3>Projekt 1</h3>
+                    </header>
+                    <div style="width: 90%">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore
+                            et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+
+                    <div style="font-size: 10px; width: 10%">
+                        <footer>Footer <a href="Projekt1.html">Projekt 1</a></footer>
+                    </div>
+
+                </article>
+            </section>
+            <section>
+                <article>
+                    <header>
+                        <h3>Projekt 2</h3>
+                    </header>
+                    <div style="width: 90%">
+                        <p>tema tis rolod muspi meroL tse sutcnas atamikat aes on ,nergrebug dsak atilc tetS .muber ae
+                            te serolod
+                            oud otsuj te masucca te soe orev tA</p>
+                    </div>
+
+                    <div style="font-size: 10px; width: 10%">
+                        <footer>Footer <a href="Projekt2.html">Projekt 2</a></footer>
+                    </div>
+
+                </article>
+            </section>
         </div>
-
-<h3>Inhalt</h3>
-<!-- DONE Unsortierte Projektliste         -->
-<ul>
-    <br><a href="Projekt1.html">Projekt 1</a>
-    <br><a href="Projekt2.html">Projekt 2</a>
-</ul>
-
-<section>
-    <article>
-        <header>
-            <h3>Projekt 1</h3>
-        </header>
-        <div style="width: 90%">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua.</p>
-        </div>
-
-        <div style="font-size: 10px; width: 10%">
-            <footer>Footer <a href="Projekt1.html">Projekt 1</a></footer>
-        </div>
-
-    </article>
-</section>
-<section>
-    <article>
-        <header>
-            <h3>Projekt 2</h3>
-        </header>
-        <div style="width: 90%">
-            <p>tema tis rolod muspi meroL tse sutcnas atamikat aes on ,nergrebug dsak atilc tetS .muber ae te serolod
-                oud otsuj te masucca te soe orev tA</p>
-        </div>
-
-        <div style="font-size: 10px; width: 10%">
-            <footer>Footer <a href="Projekt2.html">Projekt 2</a></footer>
-        </div>
-
-    </article>
-</section>
-
-
-
     </div>
 </div>
 <!--DONE Button zum laufen bringen-->
