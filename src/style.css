@@ -23,13 +23,55 @@ margin: 0px;
 }
 
 #topic{
-    padding: 10px;
-    background-color: cornsilk;
+    padding-top: 200px;
+    background-color: black;
+    horiz-align: center;
+    vertical-align: center;
+    height: 500px;
+    font-size: xx-large;
+    text-align: center;
+    color: red;
+
+}
+
+.row{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+
+
+.line1{
+    animation: fadeout 10s;
+    color: black;
+}
+
+@keyframes fadeout {
+    from {color: red;}
+    to {color: black;}
+}
+
+.line2{
+    animation: fadein 15s;
+}
+
+@keyframes fadein {
+    from { color: black; }
+    to   { color: red; }
 }
 
 #drone{
     padding: 10px;
     background-color: cornsilk;
+    height: available;
+    width: available;
 }
 
 footer{
@@ -42,7 +84,7 @@ footer{
     text-align: center;
 }
 
-footer a:link, a:visited, a:hover{
+footer a:link{
     color: white;
     text-decoration: none;
 
