@@ -80,25 +80,10 @@ menu-div:link{
     width: available;
 }
 
-
-
-
-
 #projekt-liste{
     padding-bottom: 20px;
     background-color: cornsilk;
 }
-
-#projekt-header
-{
-    background-color: #1B1C1D; /* Aufgabe 4b */
-}
-
-#projekt-footer
-{
-    background-color: #1B1C1D; /* Aufgabe 4b */
-}
-
 
 #login
 {
@@ -168,4 +153,14 @@ menu-div:link{
 @keyframes fadein {
     from { color: black; }
     to   { color: red; }
+}
+
+#projekt-header
+{
+    background-color: #1B1C1D; /* Aufgabe 4b */
+}
+
+#projekt-footer
+{
+    background-color: #FF1C1D; /* Aufgabe 4b */
 }
