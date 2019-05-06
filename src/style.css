@@ -15,6 +15,17 @@ margin: 0px;
     height: 10%;
     background-color: black;
     border-top: 3px solid #00BFFF;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+menu-div:link{
+    height: 10%;
+    background-color: black;
+    border-top: 3px solid #00BFFF;
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #second-div{
@@ -119,4 +130,17 @@ footer a:link{
     height: 90px;
     border-radius: 90px;
     background-color: darkseagreen;
+}
+
+#texteingabekurz
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#texteingabelang
+{
+    width: 100%;
 }
