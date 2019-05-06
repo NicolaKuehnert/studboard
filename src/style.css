@@ -164,3 +164,8 @@ menu-div:link{
 {
     background-color: #FF1C1D; /* Aufgabe 4b */
 }
+
+h3 {
+    font-size: 150%;    /* Aufgabe 3g */
+    color: white;       /* Aufgabe 3g */
+}
