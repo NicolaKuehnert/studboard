@@ -22,11 +22,6 @@ ol{
     color: white;
 }
 
-.head{
-    position: sticky;
-    width: 100%;
-}
-
 .head h3{
     float: left;
     font-family: fantasy;
@@ -35,8 +30,10 @@ ol{
 }
 
 .kopf{
+    position: sticky;
+    top: 0;
     background-color: #1B1C1D;
-    width: 90%;
+    width: 100%;
     display: table;
     clear: both;
 }
