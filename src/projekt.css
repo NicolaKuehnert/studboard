@@ -1,16 +1,74 @@
-ul{
+ol{
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 200px;
     background-color: black;
-    height: 100%;
-    position: fixed;
+    height: 90%;
+    position: absolute;
     overflow: auto;
     color: white;
     border-right: 3px solid #00BFFF;
 }
 
-#projekte{
-    margin-left: 25%;
+.number{
+    list-style-type: decimal;
+}
+
+.projekte{
+    margin-left: 200px;
+    background-color: #003030;
+    padding: 2px;
+    color: white;
+}
+
+.head{
+    position: sticky;
+    width: 100%;
+}
+
+.head h3{
+    float: left;
+    font-family: fantasy;
+    font-size: 200%;
+    width: 50%;
+}
+
+.kopf{
+    background-color: #1B1C1D;
+    width: 90%;
+    display: table;
+    clear: both;
+}
+
+.picture{
+    float:left;
+    width: 50%;
+}
+
+#beschreibung, #kommentare{
+    margin-left: 200px;
+    background-color: #003030;
+    padding: 2px;
+    color: white;
+}
+
+#leiter{
+    position: absolute;
+    background-color: #1B1C1D;
+    right: 0;
+    height: 100px;
+}
+
+article header{
+    background-color: #1B1C1D;
+    font-size: 150%;    /* Aufgabe 3g */
+    color: white;       /* Aufgabe 3g */
+}
+
+article footer{
+    width: unset;
+    position: relative;
+    background-color: #1B1C1D;
+    height: fit-content;
 }

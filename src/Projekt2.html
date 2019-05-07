@@ -2,6 +2,8 @@
 <html lang="de">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="projekt.css">
     <title>StudBoard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +20,23 @@
             <img src="Praktikum%20Dateien/header320x34.png">
         </picture>
     </section>
+    <!--DONE Anmeldeformular -->
+    <div id="login">
+        <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
+            Name <input type="text" name="username"/><br>
+            Passwort <input type="password" name="password"><br>
+
+            <input type="submit" value="Submit"/>
+        </form>
+
+
+        <br><a href="registrieren.html">Neu Registrieren</a>
+    </div>
 </header>
-<div style="position: relative; min-height:100vh" id="top">
-    <div style="padding-bottom: 2.5rem">
+<div id="main-div">
+    <div id="second-div">
         <!-- DONE Menüleiste          -->
-        <div style="height: 10%">
+        <div id="menu-div">
 
             <a href="index.html"><i class="glyphicon glyphicon-home" style="padding: 20px"></i></a>
             <a id="projectuebersicht" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a>
@@ -30,34 +44,29 @@
 
         </div>
 
-        <!--DONE Anmeldeformular -->
-        <div id="login">
-            <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
-                Name <input type="text" name="username"/><br>
-                Passwort <input type="password" name="password"><br>
 
-                <input type="submit" value="Submit"/>
-            </form>
-
-
-            <br><a href="registrieren.html">Neu Registrieren</a>
-        </div>
 
         <nav>
-            <ul>
-                <a href="#kurzbeschreibung">Kurzbeschreibung von Projekt 2</a> |
-                <a href="#langbeschreibung">Langbeschreibung von Projekt 2</a> |
-                <a href="#projektziele">Projektziele von Projekt 2</a>
-            </ul>
+            <ol>
+                <li><a href="#kurzbeschreibung">Kurzbeschreibung</a></li>
+                <li><a href="#langbeschreibung">Langbeschreibung</a></li>
+                <li><a href="#projektziele">Projektziele</a></li>
+            </ol>
         </nav>
-
+<div id="beschreibung">
         <section>
             <article>
-                <img src="Praktikum%20Dateien/Projektlogo.png" alt="Hier sollte das Projektlogo stehen">
-                <header>
-                    <h3>Projekt 2</h3>
-                    Projektleiter: Schapansky
-                </header>
+                <div class="kopf">
+                    <div class="picture">
+                        <img src="Praktikum%20Dateien/Projektlogo.png" alt="Hier sollte das Projektlogo stehen">
+                    </div>
+                    <div class="head">
+                        <header>
+                            <h3>Projekt 2</h3>
+                            <div id="leiter">Projektleiter: Schapansky</div>
+                        </header>
+                    </div>
+                </div>
                 <div style="width: 90%" id="kurzbeschreibung">
                     <p>tema tis rolod muspi meroL tse sutcnas atamikat aes on ,nergrebug dsak atilc tetS .muber ae te
                         serolod oud otsuj te masucca te soe orev tA</p>
@@ -73,16 +82,20 @@
                 </div>
                 <div style="width: 90%" id="projektziele">
                     <p>Projektziele</p>
-                    <ol>
+                    <ul>
                         <li>Schön</li>
                         <BR>
                         <li>Lauffähig</li>
                         <BR>
-                    </ol>
+                    </ul>
                 </div>
+                <footer>
+                    Footer Projekt 2
+                </footer>
             </article>
         </section>
-
+</div>
+    <div id="kommentare">
         <form action="leereseite.html" method="POST">
             Kommentar zum Projekt <input type="text" name="Kommentar" value=""><br>
             Note fürs Projekt
@@ -96,6 +109,7 @@
             <br><input type="submit" value="Speichern">
         </form>
 
+    </div>
     </div>
     <!--DONE Button zum laufen bringen-->
     <section>

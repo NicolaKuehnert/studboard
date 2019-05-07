@@ -3,20 +3,23 @@ header{
     background-color: cornsilk;
 }
 
-footer{
+section footer{
     position: absolute;
     bottom: 0;
-    width: 90%;
+    width: 100%;
     height: 30px;
     background-color: black;
     color: white;
     text-align: center;
 }
 
-footer a:link{
+i{
+    color: white;
+}
+
+a{
     color: white;
     text-decoration: none;
-
 }
 
 a:link{
@@ -34,7 +37,7 @@ a:link:hover{
 
 #main-div {
     position: relative;
-    min-height:100vh;
+    min-height:90vh;
     padding: 0px;
     background-color: cornsilk;
 }
@@ -155,17 +158,3 @@ menu-div:link{
     to   { color: red; }
 }
 
-#projekt-header
-{
-    background-color: #1B1C1D; /* Aufgabe 4b */
-}
-
-#projekt-footer
-{
-    background-color: #1B1C1D; /* Aufgabe 4b */
-}
-
-h3 {
-    font-size: 150%;    /* Aufgabe 3g */
-    color: white;       /* Aufgabe 3g */
-}

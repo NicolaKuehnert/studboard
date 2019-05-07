@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>StudBoard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,18 @@
             <img src="Praktikum%20Dateien/header320x34.png">
         </picture>
     </section>
+    <!--DONE Anmeldeformular -->
+    <div id="login">
+        <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
+            Name <input type="text" name="username"/><br>
+            Passwort <input type="password" name="password"><br>
 
+            <input type="submit" value="Submit"/>
+        </form>
+
+
+        <br><a href="registrieren.html">Neu Registrieren</a>
+    </div>
 
 </header>
 <div id="main-div">
@@ -33,18 +44,7 @@
 
         </div>
 
-        <!--DONE Anmeldeformular -->
-        <div id="login">
-            <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
-                Name <input type="text" name="username"/><br>
-                Passwort <input type="password" name="password"><br>
 
-                <input type="submit" value="Submit"/>
-            </form>
-
-
-            <br><a href="registrieren.html">Neu Registrieren</a>
-        </div>
 
         <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="multipart/form-data">
             Ziel: <select name="ziel">
