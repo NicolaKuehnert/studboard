@@ -31,6 +31,10 @@ a:link:hover{
     text-decoration: none;
 }
 
+.reg{
+    color: black;
+}
+
 #body {
     margin: 0px;
 }
@@ -87,6 +91,7 @@ menu-div:link{
     padding-bottom: 20px;
     background-color: cornsilk;
 }
+
 
 #login
 {

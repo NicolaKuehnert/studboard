@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="projekt.css">
     <title>StudBoard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,17 +48,38 @@
 
 
         <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="multipart/form-data">
-            Ziel: <select name="ziel">
-            <option value="schoen">Schön</option>
-            <option value="lauffaehig">Lauffähig</option>
-        </select><br>
-            Titel: <input type="text" name="titel"><br>
-
-            <textarea id="texteingabekurz" rows="3" cols="50" name="kurz">Kurzbeschreibung</textarea><br>
-            <textarea id="texteingabelang" rows="10" cols="50" name="lang">Langbeschreibung</textarea><br>
-            Startdatum: <input type="date" id="start" name="start"><br>
-            Enddatum: <input type="date" id="end" name="end"><br>
-            Logo: <input type="file" name="logo">
+            <section id="input">
+                <article>
+                    <div class="kopf">
+                        <div class="picture">
+                            <input type="file" name="logo">
+                        </div>
+                        <div class="head">
+                            <header>
+                                <input type="text" name="titel" placeholder="Titel">
+                                <div id="leiter-edit">
+                                    <input type="text" name="leiter" placeholder="Leiter">
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div id="kurzbeschreibung">
+                        <textarea name="kurz" placeholder="Kurzbeschreibung"></textarea>
+                    </div>
+                    <div id="langbeschreibung">
+                        <textarea name="lang" placeholder="Langbeschreibung"></textarea>
+                    </div>
+                    <div style="width: 90%" id="projektziele">
+                        Ziel:
+                        <select name="ziel">
+                            <option value="schoen">Schön</option>
+                            <option value="lauffaehig">Lauffähig</option>
+                        </select>
+                    </div>
+                    <footer>
+                        Startdatum: <input type="date" id="start" name="start">
+                        Enddatum: <input type="date" id="end" name="end">
+                    </footer>
             <input type="submit" VALUE="Submit"/>
         </form>
     </div>

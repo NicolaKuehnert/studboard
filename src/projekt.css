@@ -11,6 +11,11 @@ ol{
     border-right: 3px solid #00BFFF;
 }
 
+ol li:hover{
+    background-color: #87CEFA;
+    width: 200px;
+}
+
 .number{
     list-style-type: decimal;
 }
@@ -26,7 +31,7 @@ ol{
     float: left;
     font-family: fantasy;
     font-size: 200%;
-    width: 50%;
+    width: 20%;
 }
 
 .kopf{
@@ -40,7 +45,34 @@ ol{
 
 .picture{
     float:left;
-    width: 50%;
+    width: 40%;
+}
+
+#comment{
+    width: 500px;
+    height: 50px;
+    border: 2px solid #00BFFF;
+    background: transparent;
+    transition: height 0.4s ease-in-out;
+    color: black;
+}
+
+#comment:focus{
+    background: white;
+    border: 2px solid red;
+    height: 200px;
+}
+
+input{
+    color: black;
+}
+
+input[type=submit]{
+    background-color: #87CEFA;
+    color: #1B1C1D;
+    padding: 2px 10px;
+    text-decoration: none;
+    margin: 10px 10px;
 }
 
 #beschreibung, #kommentare{
@@ -50,11 +82,44 @@ ol{
     color: white;
 }
 
+#kurzbeschreibung{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#langbeschreibung{
+    margin-left: 20px;
+}
+
 #leiter{
     position: absolute;
     background-color: #1B1C1D;
     right: 0;
     height: 100px;
+}
+
+#leiter-edit{
+    position: absolute;
+    right: 0;
+
+}
+
+#input{
+    background-color: #003030;
+    padding: 2px;
+    color: white;
+}
+
+div textarea{
+    width: 70%;
+    height: 150px;
+    box-sizing: border-box;
+    border: 2px solid #00BFFF;
+    color: black;
+}
+
+.picture input[type=file]{
+    width: 200px;
 }
 
 article header{
@@ -68,4 +133,10 @@ article footer{
     position: relative;
     background-color: #1B1C1D;
     height: fit-content;
+}
+
+select{
+    padding: 2px 2px;
+    border: 2px solid #00BFFF;
+    background-color: midnightblue;
 }
