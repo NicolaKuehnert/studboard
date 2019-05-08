@@ -76,7 +76,7 @@ menu-div:link{
     height: 500px;
     font-size: xx-large;
     text-align: center;
-    color: red;
+    color: #00FF00;
 
 }
 
@@ -150,7 +150,7 @@ menu-div:link{
 }
 
 @keyframes fadeout {
-    from {color: red;}
+    from {color: #00FF00;}
     to {color: black;}
 }
 
@@ -160,6 +160,6 @@ menu-div:link{
 
 @keyframes fadein {
     from { color: black; }
-    to   { color: red; }
+    to   { color: #00FF00; }
 }
 
