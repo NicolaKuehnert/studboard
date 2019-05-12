@@ -130,9 +130,37 @@ class Project{
         this._id = id;
     }
 }
-Projekt1 = new Project("Projekt1","24.8.2020","23.4.2021", "Tolles Projekt", "Tolles Projekt mit Kaffe und Kuchen", "www.fh-bielefeld.de/kaffeeundkuchen/projekt.jpg", "Mustermann", "Forschung und Entwicklung", 1337);
-Projekt2 = new Project("Projekt2","1.4.2020","24.12.2022", "Erforschung paranormaler Lichter", "Erforschung paranormaler Lichter in Bielefeld", "www.fh-bielefeld.de/eplib/ufo.jpg", "Scully", "Erforschung von Mysterien", 42);
-Projekt3 = new Project("Projekt3","7.2.2019","18.4.2021", "Verteiltes Echtzeit-Java", "Verteiltes Echtzeit-Java in virtuellen Maschinen", "www.fh-bielefeld.de/vej/vej.jpg", "FeFe", "Erforschung von Echtzeitumgebungen", 4711);
+Projekt1 = new Project(
+    "Projekt1",
+    "24.8.2020",
+    "23.4.2021",
+    "Tolles Projekt",
+    "Tolles Projekt mit Kaffe und Kuchen",
+    "www.fh-bielefeld.de/kaffeeundkuchen/projekt.jpg",
+    "Mustermann",
+    "Forschung und Entwicklung",
+    1337);
+
+Projekt2 = new Project(
+    "Projekt2",
+    "1.4.2020",
+    "24.12.2022",
+    "Erforschung paranormaler Lichter",
+    "Erforschung paranormaler Lichter in Bielefeld",
+    "www.fh-bielefeld.de/eplib/ufo.jpg",
+    "Scully", "Erforschung von Mysterien",
+    42);
+
+Projekt3 = new Project(
+    "Projekt3",
+    "7.2.2019",
+    "18.4.2021",
+    "Verteiltes Echtzeit-Java",
+    "Verteiltes Echtzeit-Java in virtuellen Maschinen",
+    "www.fh-bielefeld.de/vej/vej.jpg",
+    "FeFe",
+    "Erforschung von Echtzeitumgebungen",
+    4711);
 
 class User{
     get benutzername() {
@@ -210,6 +238,8 @@ class User{
         this._id = id;
     }
 }
+
+User1 = new User(Peter)
 
 class Comment{
     get id() {
