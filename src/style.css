@@ -146,7 +146,7 @@ menu-div:link{
 
 .line1{
     animation: fadeout 10s;
-    color: black;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fadeout {
@@ -156,6 +156,7 @@ menu-div:link{
 
 .line2{
     animation: fadein 15s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fadein {
