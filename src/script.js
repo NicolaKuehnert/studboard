@@ -239,7 +239,16 @@ class User{
     }
 }
 
-User1 = new User(Peter)
+User1 = new User(
+    "Peter",
+    "admin@peter.de",
+    "7c03mc8g4mv8dm",
+    "www.fh-bielefeld.de/peter.jpg",
+    "Peter Mustermann",
+    "wissenschaftlicher Mitarbeiter im Labor für Echtzeitsysteme",
+    "Forschung",
+    "1337"
+);
 
 class Comment{
     get id() {
