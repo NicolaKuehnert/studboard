@@ -58,3 +58,13 @@ class User{
         this.id=p8;
     }
 }
+
+class Comment{
+    constructor(p1, p2, p3, p4, p5){
+        this.id=p1;
+        this.emailadresse=p2;
+        this.kommentar=p3;
+        this.bewertung=p4;
+        this.user=p5;
+    }
+}
