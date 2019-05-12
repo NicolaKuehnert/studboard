@@ -8,7 +8,7 @@ console.log(translate_menue);
 console.log(translate_kurzbeschreibung);
 console.log(translate_langbeschreibung);
 
-/*Aufgabe 2: Abstrakte Klasse */
+/*Aufgabe 2a: Abstrakte Klasse */
 class Zuordnung{
     constructor(param1){
         this.attribut1 = param1;
