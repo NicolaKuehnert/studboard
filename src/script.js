@@ -30,3 +30,31 @@ class Zuordnung{
 }
 zuordnung1 = new Zuordnung("user1", "deutsch", "Projekt42");
 zuordnung2 = new Zuordnung("user2", "englisch", "science project 0815");
+
+/* Aufgabe 2b: Projekt-Klasse */
+class Project{
+    constructor(p1, p2, p3, p4, p5, p6, p7, p8, p9){
+        this.titel=p1;
+        this.startzeitpunkt=p2;
+        this.endzeitpunkt=p3;
+        this.kurzbeschreibung=p4;
+        this.langbeschreibung=p5;
+        this.logo=p6;;
+        this.projektleiter=p7;
+        this.zielliste=p8;
+        this.id=p9;
+    }
+}
+
+class User{
+    constructor(p1, p2, p3, p4, p5, p6, p7, p8){
+        this.benutzername=p1;
+        this.emailadresse=p2;
+        this.passwort=p3;
+        this.profilbild=p4;
+        this.kurzbeschreibung=p5;
+        this.langbeschreibung=p6;;
+        this.zielliste=p7;
+        this.id=p8;
+    }
+}
