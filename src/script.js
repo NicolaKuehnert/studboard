@@ -130,6 +130,8 @@ class Project{
         this._id = id;
     }
 }
+Projekt1 = new Project("Projekt1","24.8.2020","23.4.2021", "Tolles Projekt", "Tolles Projekt mit Kaffe und Kuchen", "www.fh-bielefeld.de/kaffeeundkuchen/projekt.jpg", "Mustermann", "Forschung und Entwicklung", 1337);
+Projekt1 = new Project("Projekt2","1.4.2020","24.12.2022", "Erforschung paranormaler Lichter", "Erforschung paranormaler Lichter in Bielefeld", "www.fh-bielefeld.de/eplib/ufo.jpg", "Scully", "Erforschung von Mysterien", 42);
 
 class User{
     get benutzername() {
