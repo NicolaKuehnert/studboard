@@ -39,7 +39,7 @@ class Project{
         this.endzeitpunkt=p3;
         this.kurzbeschreibung=p4;
         this.langbeschreibung=p5;
-        this.logo=p6;;
+        this.logo=p6;
         this.projektleiter=p7;
         this.zielliste=p8;
         this.id=p9;
