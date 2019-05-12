@@ -53,7 +53,7 @@ class User{
         this.passwort=p3;
         this.profilbild=p4;
         this.kurzbeschreibung=p5;
-        this.langbeschreibung=p6;;
+        this.langbeschreibung=p6;
         this.zielliste=p7;
         this.id=p8;
     }
