@@ -70,9 +70,11 @@ p1 = new Project(
 json1 = new convertJSON(u1).toJSON();
 json2 = new convertJSON(p1).toJSON();
 
+console.log("Ist json1 objekt? " + json1 + "\n"  + "Ist json2 objekt? " + json2);
 console.log(JSON.stringify(json1) + "\n" + JSON.stringify(json2));
 
 u2 = new convertJSON(json1).fromJSON();
 p2 = new convertJSON(json2).fromJSON();
 
+console.log("Ist u2 objekt? " + u2 + "\n" + "Ist p2 objekt? " + p2);
 console.log(JSON.stringify(u2) + "\n" + JSON.stringify(p2));
