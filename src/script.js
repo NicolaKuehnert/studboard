@@ -10,61 +10,249 @@ console.log(translate_langbeschreibung);
 
 /*Aufgabe 2a: Abstrakte Klasse */
 class Zuordnung{
-    constructor(param1, param2, param3){
-        this.attribut1 = param1;
-        this.attribut2 = param2;
-        this.attribut3 = param3;
+    get user() {
+        return this._user;
     }
 
-    methode1(){
-        return this.attribut1;
+    set user(value) {
+        this._user = value;
     }
 
-    methode2(){
-        return this.attribut2;
+    get sprache() {
+        return this._sprache;
     }
 
-    methode3(){
-        return this.attribut3;
+    set sprache(value) {
+        this._sprache = value;
+    }
+
+    get projektname() {
+        return this._projektname;
+    }
+
+    set projektname(value) {
+        this._projektname = value;
+    }
+    constructor(user, sprache, projektname){
+
+        this._projektname = projektname;
+        this._user = user;
+        this._sprache = sprache;
     }
 }
+
 zuordnung1 = new Zuordnung("user1", "deutsch", "Projekt42");
 zuordnung2 = new Zuordnung("user2", "englisch", "science project 0815");
 
 /* Aufgabe 2b: Projekt-Klasse */
 class Project{
-    constructor(p1, p2, p3, p4, p5, p6, p7, p8, p9){
-        this.titel=p1;
-        this.startzeitpunkt=p2;
-        this.endzeitpunkt=p3;
-        this.kurzbeschreibung=p4;
-        this.langbeschreibung=p5;
-        this.logo=p6;
-        this.projektleiter=p7;
-        this.zielliste=p8;
-        this.id=p9;
+    get titel() {
+        return this._titel;
+    }
+
+    set titel(value) {
+        this._titel = value;
+    }
+
+    get start() {
+        return this._start;
+    }
+
+    set start(value) {
+        this._start = value;
+    }
+
+    get ende() {
+        return this._ende;
+    }
+
+    set ende(value) {
+        this._ende = value;
+    }
+
+    get kurzbeschreibung() {
+        return this._kurzbeschreibung;
+    }
+
+    set kurzbeschreibung(value) {
+        this._kurzbeschreibung = value;
+    }
+
+    get langbeschreibung() {
+        return this._langbeschreibung;
+    }
+
+    set langbeschreibung(value) {
+        this._langbeschreibung = value;
+    }
+
+    get logo() {
+        return this._logo;
+    }
+
+    set logo(value) {
+        this._logo = value;
+    }
+
+    get projektleiter() {
+        return this._projektleiter;
+    }
+
+    set projektleiter(value) {
+        this._projektleiter = value;
+    }
+
+    get zielliste() {
+        return this._zielliste;
+    }
+
+    set zielliste(value) {
+        this._zielliste = value;
+    }
+
+    get id() {
+        return this._id;
+    }
+
+    set id(value) {
+        this._id = value;
+    }
+
+    constructor(titel, start, ende, kurzbeschreibung, langbeschreibung, logo, projektleiter, zielliste, id){
+        this._titel = titel;
+        this._start = start;
+        this._ende = ende;
+        this._kurzbeschreibung = kurzbeschreibung;
+        this._langbeschreibung = langbeschreibung;
+        this._logo = logo;
+        this._projektleiter = projektleiter;
+        this._zielliste = zielliste;
+        this._id = id;
     }
 }
 
 class User{
-    constructor(p1, p2, p3, p4, p5, p6, p7, p8){
-        this.benutzername=p1;
-        this.emailadresse=p2;
-        this.passwort=p3;
-        this.profilbild=p4;
-        this.kurzbeschreibung=p5;
-        this.langbeschreibung=p6;
-        this.zielliste=p7;
-        this.id=p8;
+    get benutzername() {
+        return this._benutzername;
+    }
+
+    set benutzername(value) {
+        this._benutzername = value;
+    }
+
+    get emailadresse() {
+        return this._emailadresse;
+    }
+
+    set emailadresse(value) {
+        this._emailadresse = value;
+    }
+
+    get passwort() {
+        return this._passwort;
+    }
+
+    set passwort(value) {
+        this._passwort = value;
+    }
+
+    get profilbild() {
+        return this._profilbild;
+    }
+
+    set profilbild(value) {
+        this._profilbild = value;
+    }
+
+    get kurzbeschreibung() {
+        return this._kurzbeschreibung;
+    }
+
+    set kurzbeschreibung(value) {
+        this._kurzbeschreibung = value;
+    }
+
+    get langbeschreibung() {
+        return this._langbeschreibung;
+    }
+
+    set langbeschreibung(value) {
+        this._langbeschreibung = value;
+    }
+
+    get zielliste() {
+        return this._zielliste;
+    }
+
+    set zielliste(value) {
+        this._zielliste = value;
+    }
+
+    get id() {
+        return this._id;
+    }
+
+    set id(value) {
+        this._id = value;
+    }
+    constructor(benutzername, emailadresse, passwort, profilbild, kurzbeschreibung, langbeschreibung, zielliste, id){
+
+        this._benutzername = benutzername;
+        this._emailadresse = emailadresse;
+        this._passwort = passwort;
+        this._profilbild = profilbild;
+        this._kurzbeschreibung = kurzbeschreibung;
+        this._langbeschreibung = langbeschreibung;
+        this._zielliste = zielliste;
+        this._id = id;
     }
 }
 
 class Comment{
-    constructor(p1, p2, p3, p4, p5){
-        this.id=p1;
-        this.emailadresse=p2;
-        this.kommentar=p3;
-        this.bewertung=p4;
-        this.user=p5;
+    get id() {
+        return this._id;
+    }
+
+    set id(value) {
+        this._id = value;
+    }
+
+    get emailadresse() {
+        return this._emailadresse;
+    }
+
+    set emailadresse(value) {
+        this._emailadresse = value;
+    }
+
+    get kommentar() {
+        return this._kommentar;
+    }
+
+    set kommentar(value) {
+        this._kommentar = value;
+    }
+
+    get bewertung() {
+        return this._bewertung;
+    }
+
+    set bewertung(value) {
+        this._bewertung = value;
+    }
+
+    get user() {
+        return this._user;
+    }
+
+    set user(value) {
+        this._user = value;
+    }
+    constructor(id, emailadresse, kommentar, bewertung, user){
+        this._id = id;
+        this._emailadresse = emailadresse;
+        this._kommentar = kommentar;
+        this._bewertung = bewertung;
+        this._user = user;
     }
 }
