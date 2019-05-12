@@ -10,7 +10,7 @@ console.log(translate_langbeschreibung);
 
 /*Aufgabe 2a: Abstrakte Klasse */
 class Zuordnung{
-    constructor(param1){
+    constructor(param1, param2, param3){
         this.attribut1 = param1;
         this.attribut2 = param2;
         this.attribut3 = param3;
