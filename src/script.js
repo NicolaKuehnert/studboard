@@ -4,6 +4,15 @@ let english ={project:"Project", menue:"Menu", short_desc:"Short description", l
 console.log(german);
 console.log(english);
 
+var lang = navigator.language || navigator.userLanguage;
+console.log(lang);
+if (lang.includes("de")){
+    alert("Willkommen!");
+}
+else if(lang.includes("en")){
+    alert("Welcome!");
+}
+
 /*Aufgabe 2a: Abstrakte Klasse */
 class Zuordnung{
     get user() {
