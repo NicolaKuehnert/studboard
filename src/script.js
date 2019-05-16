@@ -1,12 +1,8 @@
 /* Aufgabe 1: Zuordnung von Begriffen über Array */
-let translate_projekt = new Array("Projekt","project");
-let translate_menue = new Array("Menü", "menu");
-let translate_kurzbeschreibung = new Array("Kurzbeschreibung", "short description");
-let translate_langbeschreibung = new Array("Langbeschreibung", "long description");
-console.log(translate_projekt);
-console.log(translate_menue);
-console.log(translate_kurzbeschreibung);
-console.log(translate_langbeschreibung);
+let german = {project:"Projekt", menue:"Menü", short_desc:"Kurzbeschreibung", long_desc:"Langbeschreibung"};
+let english ={project:"Project", menue:"Menu", short_desc:"Short description", long_desc:"Long description"};
+console.log(german);
+console.log(english);
 
 /*Aufgabe 2a: Abstrakte Klasse */
 class Zuordnung{

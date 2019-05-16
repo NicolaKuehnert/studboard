@@ -9,38 +9,38 @@ class convertJSON {
         return jsonObject;
     }
 
-    fromJSON(){
-        if(this.object1.hasOwnProperty("titel")) {
+    toObject(){
+        if(this.object1.hasOwnProperty("_titel")) {
             console.log("Object is a project");
             let project = new Project(
-                this.object1.title,
-                this.object1.startzeitpunkt,
-                this.object1.endzeitpunkt,
-                this.object1.kurzbeschreibung,
-                this.object1.langbeschreibung,
-                this.object1.logo,
-                this.object1.projektleiter,
-                this.object1.zielliste,
+                this.object1._titel,
+                this.object1._start,
+                this.object1._ende,
+                this.object1._kurzbeschreibung,
+                this.object1._langbeschreibung,
+                this.object1._logo,
+                this.object1._projektleiter,
+                this.object1._zielliste,
                 this.object1.id
             );
             return project;
         }
-        else if(this.object1.hasOwnProperty("benutzername")){
+        else if(this.object1.hasOwnProperty("_benutzername")){
             console.log("Object is a User");
             let user = new User(
-                this.object1.benutzername,
-                this.object1.emailadresse,
-                this.object1.passwort,
-                this.object1.profilbild,
-                this.object1.kurzbeschreibung,
-                this.object1.langbeschreibung,
-                this.object1.zielliste,
+                this.object1._benutzername,
+                this.object1._emailadresse,
+                this.object1._passwort,
+                this.object1._profilbild,
+                this.object1._kurzbeschreibung,
+                this.object1._langbeschreibung,
+                this.object1._zielliste,
                 this.object1.id
             )
             return user;
         }
         else{
-            console.log("Not a parsable object");
+            console.log(this.object1);
         }
     }
 }
@@ -73,8 +73,8 @@ json2 = new convertJSON(p1).toJSON();
 console.log("Ist json1 objekt? " + json1 + "\n"  + "Ist json2 objekt? " + json2);
 console.log(JSON.stringify(json1) + "\n" + JSON.stringify(json2));
 
-u2 = new convertJSON(json1).fromJSON();
-p2 = new convertJSON(json2).fromJSON();
+u2 = new convertJSON(json1).toObject();
+p2 = new convertJSON(json2).toObject();
 
 console.log("Ist u2 objekt? " + u2 + "\n" + "Ist p2 objekt? " + p2);
 console.log(JSON.stringify(u2) + "\n" + JSON.stringify(p2));
