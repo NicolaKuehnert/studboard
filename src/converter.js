@@ -67,7 +67,7 @@ p1 = new Project(
     1
 );
 
-if(performance.navigation.type == 1){
+if(performance.navigation.type === 1){
     /*
     Da wir die Items als Strings im Storage ablegen müssen, muss der Json String erst nochmal zum Json Objekt werden
     und kann dann zurück zum richtigen Objekt-Typ konvertiert werden
