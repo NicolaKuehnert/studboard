@@ -40,7 +40,7 @@ class convertJSON {
             return user;
         }
         else{
-            console.log(this.object1);
+            console.log("Something went wrong converting");
         }
     }
 }
@@ -67,11 +67,26 @@ p1 = new Project(
     1
 );
 
-json1 = new convertJSON(u1).toJSON();
-json2 = new convertJSON(p1).toJSON();
+if(performance.navigation.type == 1){
+    /*
+    Da wir die Items als Strings im Storage ablegen müssen, muss der Json String erst nochmal zum Json Objekt werden
+    und kann dann zurück zum richtigen Objekt-Typ konvertiert werden
+    */
+    json1 = JSON.parse(localStorage.getItem("user1"));
+    json2 = JSON.parse(localStorage.getItem("project1"));
+    console.log("Load from storage")
 
-console.log("Ist json1 objekt? " + json1 + "\n"  + "Ist json2 objekt? " + json2);
-console.log(JSON.stringify(json1) + "\n" + JSON.stringify(json2));
+    console.log("Ist json1 objekt? " + json1 + "\n" + "Ist json2 objekt? " + json2);
+
+} else {
+    json1 = new convertJSON(u1).toJSON();
+    json2 = new convertJSON(p1).toJSON();
+
+    localStorage.setItem("user1", JSON.stringify(json1));
+    localStorage.setItem("project1", JSON.stringify(json2));
+    console.log("Save to storage");
+}
+
 
 u2 = new convertJSON(json1).toObject();
 p2 = new convertJSON(json2).toObject();
