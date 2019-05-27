@@ -1,7 +1,3 @@
-/* Aufgabe 1: Zuordnung von Begriffen über Array */
-
-
-
 /*Aufgabe 2a: Abstrakte Klasse */
 class Zuordnung{
     get user() {

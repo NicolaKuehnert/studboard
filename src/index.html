@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="x-iso-8859-11"/>
     <script>
         // Check that service workers are registered
         if ('serviceWorker' in navigator) {
@@ -19,11 +19,13 @@
     <script src="translator_index.js"></script>
     <script src="script.js"></script>
     <script src="converter.js"></script>
-    <script src="login.js"></script>
+    <script src="login.js"></script> <!-- Here is the script -->
     <script src="geolocation.js"></script>
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="projekt.css">
+
     <title>StudBoard</title>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -44,17 +46,20 @@
     </section>
     <!--children 1 -->
     <div id="login" style="display: block;">
-        <form action="http://localhost:63342/studboard/leereseite.html" method="POST"
-              enctype="application/x-www-form-urlencoded">
+        <form>
             Name <input type="text" name="username"/><br>
             Passwort <input type="password" name="password"><br>
 
-            <input type="submit" onclick="login()" value="Submit"/>
+            <input type="submit" onclick="login()" value="Login"/>
         </form>
         <a class="reg" href="registrieren.html">Neu Registrieren</a>
     </div>
+    <!--children 2 -->
     <div id="logout" style="display: none;">
-        <button onclick="logout()">Ausloggen</button>
+        <form>
+            <input type="hidden" value="logout"/>
+            <input type="submit" onclick="logout()" value="Logout"/>
+        </form>
     </div>
 
 </header>
