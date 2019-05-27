@@ -102,6 +102,16 @@ menu-div:link{
     padding: 5px;
 }
 
+#logout
+{
+    background-color: cornsilk;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+}
+
+
 #top_link{
     position: absolute;
     text-decoration: none;

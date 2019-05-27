@@ -1,0 +1,1 @@
+window.location.replace("http://localhost:63342/studboard/index.html");
