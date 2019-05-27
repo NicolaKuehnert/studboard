@@ -10,7 +10,8 @@ let german = {
     welcome_message_2:"Hier gibt es Motivation für Studierende",
     about:"<h3>Worum geht es?</h3>\n" + "Hier geht es darum, deine Projekte während dem Studium im Blick zu haben.",
     news:"Das sind die neusten Projekte:",
-    top:"Anfang der Seite"
+    top:"Anfang der Seite",
+    details:"Zu den Projektdetails"
 };
 let english ={
     project:"Project",
@@ -23,7 +24,8 @@ let english ={
     welcome_message_2:"Here you will find motivation for students",
     about:"<h3>What is this about</h3>\n" + "This is about having an overview of your projects in university.",
     news:"These are the newest projects:",
-    top:"Back to top"
+    top:"Back to top",
+    details:"To project details"
 };
 console.log(german);
 console.log(english);
@@ -42,7 +44,11 @@ window.onload = function()
         document.body.children[1].children[0].children[1].children[1].innerHTML = english["welcome_message_2"];
         document.body.children[1].children[0].children[2].children[0].children[0].innerHTML = english["about"];
         document.body.children[1].children[0].children[2].children[1].children[0].innerHTML = english["news"];
+        document.body.children[1].children[0].children[2].children[1].children[1].children[1].innerHTML = english["details"];
+        document.body.children[1].children[0].children[2].children[1].children[1].children[3].innerHTML = english["details"];
+
         document.body.children[1].children[1].children[1].children[0].innerHTML = english["top"];
+
     }
 
 }
