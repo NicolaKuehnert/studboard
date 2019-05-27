@@ -112,7 +112,10 @@ if(performance.navigation.type === 1){
     */
     json1 = JSON.parse(localStorage.getItem("user1"));
     for (j = 0; j < localStorage.length; j++){
-        project_list[j] = new convertJSON(JSON.parse(localStorage.getItem("project" +j))).toObject();
+        if (localStorage.getItem("project" +j)) {
+            project_list[j] = new convertJSON(JSON.parse(localStorage.getItem("project" +j))).toObject();
+
+        }
     }
     console.log("Load from storage");
 

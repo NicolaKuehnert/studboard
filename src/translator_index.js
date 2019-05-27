@@ -27,15 +27,26 @@ let english ={
     top:"Back to top",
     details:"To project details"
 };
-console.log(german);
-console.log(english);
 
 var lang = navigator.language || navigator.userLanguage;
 console.log(lang);
 
 window.onload = function()
 {
+    check_login();
     if (lang.includes("de")){
+        document.body.children[1].children[0].children[0].children[1].innerHTML = german["project_overview"];
+        document.body.children[1].children[0].children[0].children[2].innerHTML = german["newArticle_menu"];
+        document.body.children[1].children[0].children[1].children[0].innerHTML = german["welcome_message"];
+        document.body.children[1].children[0].children[1].children[1].innerHTML = german["welcome_message_2"];
+        document.body.children[1].children[0].children[2].children[0].children[0].innerHTML = german["about"];
+        document.body.children[1].children[0].children[2].children[1].children[0].innerHTML = german["news"];
+        document.body.children[1].children[0].children[2].children[1].children[1].children[1].innerHTML = german["details"];
+        document.body.children[1].children[0].children[2].children[1].children[1].children[3].innerHTML = german["details"];
+        document.body.children[1].children[0].children[2].children[1].children[1].children[5].innerHTML = german["details"];
+
+        document.body.children[1].children[1].children[1].children[0].innerHTML = german["top"];
+
     }
     else if(lang.includes("en")){
         document.body.children[1].children[0].children[0].children[1].innerHTML = english["project_overview"];
@@ -46,9 +57,14 @@ window.onload = function()
         document.body.children[1].children[0].children[2].children[1].children[0].innerHTML = english["news"];
         document.body.children[1].children[0].children[2].children[1].children[1].children[1].innerHTML = english["details"];
         document.body.children[1].children[0].children[2].children[1].children[1].children[3].innerHTML = english["details"];
+        document.body.children[1].children[0].children[2].children[1].children[1].children[5].innerHTML = english["details"];
 
         document.body.children[1].children[1].children[1].children[0].innerHTML = english["top"];
 
     }
 
+
+    document.body.children[1].children[0].children[2].children[1].children[1].children[0].innerHTML = (project_list[0].titel + "<br>" + project_list[0].kurzbeschreibung + "<br>");
+    document.body.children[1].children[0].children[2].children[1].children[1].children[2].innerHTML = (project_list[1].titel + "<br>" + project_list[1].kurzbeschreibung + "<br>");
+    document.body.children[1].children[0].children[2].children[1].children[1].children[4].innerHTML = (project_list[2].titel + "<br>" + project_list[2].kurzbeschreibung + "<br>");
 }

@@ -3,7 +3,7 @@ let is_logged_in = localStorage.getItem("is_logged_in");
 /*
 Why is document.body here null?
  */
-window.onload = function () {
+function check_login() {
     console.log("Login");
     if (is_logged_in === "1"){
         console.log("off");
