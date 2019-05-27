@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
+    <meta charset="utf-8"/>
     <script>
         // Check that service workers are registered
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('sw.js').then(function(registration) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('sw.js').then(function (registration) {
                     // Registration was successful
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function(err) {
+                }, function (err) {
                     // registration failed :(
                     console.log('ServiceWorker registration failed: ', err);
                 });
@@ -29,6 +29,7 @@
 
 </head>
 <body>
+<!--children 0 -->
 <header id="top">
     <section>
         <!-- DONE Hier müssten wir die Größe des Fensters berücksichtigen         -->
@@ -40,7 +41,8 @@
         </picture>
     </section>
     <div id="login">
-        <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="application/x-www-form-urlencoded">
+        <form action="http://localhost:63342/studboard/leereseite.html" method="POST"
+              enctype="application/x-www-form-urlencoded">
             Name <input type="text" name="username"/><br>
             Passwort <input type="password" name="password"><br>
 
@@ -50,54 +52,56 @@
     </div>
 
 </header>
+<!--children 1 -->
 <div id="main-div">
+    <!--children 0 -->
     <div id="second-div">
-        <!-- DONE Menüleiste          -->
+        <!--children 0 -->
         <div id="menu-div">
 
             <a href="index.html"><i class="glyphicon glyphicon-home" style="padding: 20px"></i></a>
-            <a id="projectuebersicht" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a>
+            <a id="project_overview" href="projektuebersicht.html" style="padding: 20px">Projektübersicht</a>
             <a id="newArticle_menu" href="neueArtikel.html" style="padding: 20px">Neues Projekt</a>
 
         </div>
-
-        <!--DONE Anmeldeformular -->
-
-
-        <!-- DONE Begrüßung -->
+        <!--children 1 -->
         <div id="topic">
-            <p class="line1">Willkommen im StudBoard.</p>
+            <p class="line1">Willkommen im StudBoard</p>
             <p class="line2"> Hier gibt es Motivation für Studierende!</p>
         </div>
-<div class="row">
-        <!-- DONE Video -->
-        <div class="column">
-            <h3>Worum geht es?</h3>
-            Hier geht es darum, deine Projekte während dem Studium im Blick zu haben.
+        <!--children 2 -->
+        <div class="row">
+            <!--children 0 -->
+            <div class="column">
+                <div id="about">
+                    <h3>Worum geht es?</h3>
+                    Hier geht es darum, deine Projekte während dem Studium im Blick zu haben.
+                </div>
 
-            <video class="column" controls>
-                <source src="Praktikum%20Dateien/video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+
+                <video class="column" controls>
+                    <source src="Praktikum%20Dateien/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!--children 1 -->
+            <div class="column">
+                <h4>Das sind die neusten Projekte:</h4>
+                <section id="projekt-liste">
+                    <br><a class="reg" href="Projekt1.html">Projekt 1</a>
+                    <br><a class="reg" href="Projekt2.html">Projekt 2</a>
+                </section>
+
+
+            </div>
         </div>
-
-        <!-- DONE Neue Projekte -->
-        <div class="column">
-            <h4>Das sind die neusten Projekte:</h4>
-            <section id="projekt-liste">
-                <br><a class="reg" href="Projekt1.html">Projekt 1</a>
-                <br><a class="reg" href="Projekt2.html">Projekt 2</a>
-            </section>
-
-
-        </div>
-</div>
     </div>
 
 
-
-    <!--DONE Button zum laufen bringen-->
+    <!--children 1-->
     <section>
+        <!-- children 0 -->
         <footer>
             <a href="copyright.html">Copyright</a>
             <a href="kontakt.html">Kontakt</a>
@@ -106,7 +110,9 @@
             <a href="haftung.html">Haftungsausschluss</a>
 
         </footer>
+        <!-- children 1 -->
         <div id="top_link">
+            <!-- children 0 -->
             <a href="#top">Anfang der Seite</a>
         </div>
 
