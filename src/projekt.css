@@ -49,6 +49,23 @@ ol li:hover{
     width: 40%;
 }
 
+.user{
+    background-color: #1B1C1D;
+    color: white;
+    font-size: large;
+}
+
+.comment_section{
+    margin: 20px;
+}
+
+.comment_foot{
+    background-color: #003030;
+    color: #00BFFF;
+    font-size: small;
+    position: unset;
+}
+
 #comment{
     width: 500px;
     height: 50px;

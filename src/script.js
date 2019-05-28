@@ -240,7 +240,7 @@ User1 = new User(
     "1337"
 );
 
-class Comment{
+class Comments{
     get id() {
         return this._id;
     }
@@ -280,9 +280,8 @@ class Comment{
     set user(value) {
         this._user = value;
     }
-    constructor(id, emailadresse, kommentar, bewertung, user){
+    constructor(id, kommentar, bewertung, user){
         this._id = id;
-        this._emailadresse = emailadresse;
         this._kommentar = kommentar;
         this._bewertung = bewertung;
         this._user = user;

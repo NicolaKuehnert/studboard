@@ -39,6 +39,16 @@ class convertJSON {
             )
             return user;
         }
+        else if(this.object1.hasOwnProperty("_user")){
+            let comment = new Comments(
+                this.object1._id,
+                this.object1._kommentar,
+                this.object1._bewertung,
+                this.object1._user
+            );
+            console.log(comment);
+            return comment;
+        }
         else{
             console.log("Something went wrong converting");
         }

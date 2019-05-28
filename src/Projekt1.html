@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <script src="script.js"></script>
+    <script src="converter.js"></script>
+    <script src="comments.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="projekt.css">
@@ -130,18 +133,17 @@
             </article>
         </section>
 <section id="kommentare">
-    <form action="leereseite.html" method="POST">
         Kommentar zum Projekt <br><textarea id="comment" type="text" name="Kommentar" value=""></textarea><br>
         <br>Note fürs Projekt
-        <select name="note" size="1">
+        <select name="note" id="note" size="1">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <br><input id="senden" type="submit" value="Speichern">
-    </form>
+        <br><button id="senden" onclick="saveComment()" value="Speichern">Speichern</button>
+    <div id="comment_section"></div>
 </section>
 
 
