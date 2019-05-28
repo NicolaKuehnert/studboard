@@ -5,32 +5,38 @@ let rating = "</div>\n" +
     "        <footer class=\"comment_foot\">Bewertung: ";let end = "</footer>";
 let i = 0;
 
+var id = GET_var("_id");
+
+let json = JSON.parse(localStorage.getItem("project"+id));
+let project = new convertJSON(json).toObject();
+
 function saveComment() {
     let text = document.getElementById("comment").value;
     let note = document.getElementById("note");
     let note_text = note.options[note.selectedIndex].text;
 
-    let comment = new Comments(i,text, note_text, localStorage.getItem("username"));
+    let comment = new Comments(id,text, note_text, localStorage.getItem("username"));
     let json = new convertJSON(comment).toJSON();
-    localStorage.setItem(("comment"+i), JSON.stringify(json));
+    localStorage.setItem(("comment"+i+id), JSON.stringify(json));
     i++;
 }
 
 window.onload = function () {
-
+    document.getElementById("logout-form").setAttribute("action",("Projekt1.html?_id="+id));
+    document.getElementById("login-form").setAttribute("action",("Projekt1.html?_id="+id));
+    document.getElementById("comment-form").setAttribute("action",("Projekt1.html?_id="+id));
     loadComments();
     loadProject();
-    check_login();
+    let check = check_login();
+    if(check === 1){
+        document.getElementById("edit").style.display = "block";
+    } else {
+        document.getElementById("edit").style.display = "none";
+    }
 
 }
 
 function loadProject() {
-
-    var id = GET_var("_id");
-
-    let json = JSON.parse(localStorage.getItem("project"+id));
-    let project = new convertJSON(json).toObject();
-
     document.getElementById("titel").innerHTML = project.titel;
     document.getElementById("leiter").innerHTML = project.projektleiter;
     document.getElementById("kurzbeschreibung").innerHTML = project.kurzbeschreibung;
@@ -60,12 +66,16 @@ function loadProject() {
     }
 }
 
+function editButton(){
+
+}
+
 function loadComments() {
     i = 0;
     let avgrating = 0;
     for(let x = 0; x< localStorage.length;x++){
-        if(localStorage.getItem("comment"+x)){
-            let storage = JSON.parse(localStorage.getItem("comment"+x));
+        if(localStorage.getItem("comment"+x+id)){
+            let storage = JSON.parse(localStorage.getItem("comment"+x+id));
             let comment = new convertJSON(storage).toObject();
             let html = head + comment.user + text_field + comment.kommentar + rating + comment.bewertung + end;
             document.getElementById("comment_section").innerHTML += html;

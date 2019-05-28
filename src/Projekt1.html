@@ -24,7 +24,7 @@
         </picture>
     </section>
     <div id="login" style="display: block;">
-        <form>
+        <form id="login-form">
             Name <input type="text" name="username"/><br>
             Passwort <input type="password" name="password"><br>
 
@@ -34,7 +34,7 @@
     </div>
     <!--children 2 -->
     <div id="logout" style="display: none;">
-        <form>
+        <form id="logout-form">
             <input type="hidden" value="logout"/>
             <input type="submit" onclick="logout()" value="Logout"/>
         </form>
@@ -82,13 +82,16 @@
                     <ul id="zielliste">
                     </ul>
                 </div>
+                <div id="edit" style="display: none;">
+                    <button onclick="editButton()" style="color: black">Editieren</button>
+                </div>
                 <footer id="avg_rating">
 
                 </footer>
             </article>
         </section>
 <section id="kommentare">
-    <form>
+    <form id="comment-form">
         Kommentar zum Projekt <br><textarea id="comment" type="text" name="Kommentar" value=""></textarea><br>
         <br>Note fürs Projekt
         <select name="note" id="note" size="1">
@@ -98,7 +101,7 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <br><button id="senden" onclick="saveComment()" value="Speichern">Speichern</button>
+        <br><button id="senden" onclick="saveComment()" value="Speichern" style="color: black">Speichern</button>
     </form>
     <div id="comment_section"></div>
 </section>

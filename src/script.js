@@ -129,7 +129,7 @@ Projekt1 = new Project(
     "www.fh-bielefeld.de/kaffeeundkuchen/projekt.jpg",
     "Mustermann",
     "Forschung und Entwicklung",
-    1337);
+    0);
 
 Projekt2 = new Project(
     "Projekt2",
@@ -139,7 +139,7 @@ Projekt2 = new Project(
     "Erforschung paranormaler Lichter in Bielefeld",
     "www.fh-bielefeld.de/eplib/ufo.jpg",
     "Scully", "Erforschung von Mysterien",
-    42);
+    1);
 
 Projekt3 = new Project(
     "Projekt3",
@@ -150,7 +150,7 @@ Projekt3 = new Project(
     "www.fh-bielefeld.de/vej/vej.jpg",
     "FeFe",
     "Erforschung von Echtzeitumgebungen",
-    4711);
+    2);
 
 class User{
     get benutzername() {

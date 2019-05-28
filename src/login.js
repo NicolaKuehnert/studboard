@@ -11,12 +11,14 @@ function check_login() {
         let out_button = document.getElementById("logout");
         in_button.style.display = "none";
         out_button.style.display = "block";
+        return 1;
     }  else if (is_logged_in === "0") {
         console.log("on");
         let in_button = document.getElementById("login");
         let out_button = document.getElementById("logout");
         in_button.style.display = "block";
         out_button.style.display = "none";
+        return 0;
     }
 }
 

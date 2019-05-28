@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <script src="script.js"></script>
+    <script src="converter.js"></script>
+    <script src="newarticle.js"></script>
     <script src="login.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -52,32 +55,30 @@
         </div>
 
 
-
-        <form action="http://localhost:63342/studboard/leereseite.html" method="POST" enctype="multipart/form-data">
-            <section id="input">
+    <section id="input">
                 <article>
                     <div class="kopf">
                         <div class="picture">
-                            <input type="file" name="logo">
+                            <input type="file" name="logo" id="logo">
                         </div>
                         <div class="head">
                             <header>
-                                <input type="text" name="titel" placeholder="Titel">
+                                <input type="text" name="titel" id="title" placeholder="Titel">
                                 <div id="leiter-edit">
-                                    <input type="text" name="leiter" placeholder="Leiter">
+                                    <input type="text" name="leiter" id="leader" placeholder="Leiter">
                                 </div>
                             </header>
                         </div>
                     </div>
                     <div id="kurzbeschreibung">
-                        <textarea name="kurz" placeholder="Kurzbeschreibung"></textarea>
+                        <textarea name="kurz" id="kurz" placeholder="Kurzbeschreibung"></textarea>
                     </div>
                     <div id="langbeschreibung">
-                        <textarea name="lang" placeholder="Langbeschreibung"></textarea>
+                        <textarea name="lang" id="lang" placeholder="Langbeschreibung"></textarea>
                     </div>
                     <div style="width: 90%" id="projektziele">
                         Ziel:
-                        <select name="ziel">
+                        <select name="ziel" id="ziel">
                             <option value="schoen">Schön</option>
                             <option value="lauffaehig">Lauffähig</option>
                         </select>
@@ -86,8 +87,10 @@
                         Startdatum: <input type="date" id="start" name="start">
                         Enddatum: <input type="date" id="end" name="end">
                     </footer>
-            <input type="submit" VALUE="Submit"/>
-        </form>
+                </article>
+            <input type="submit" onclick="save()" VALUE="Submit"/>
+            </section>
+
     </div>
 
 </div>

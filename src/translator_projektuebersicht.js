@@ -61,7 +61,7 @@ window.onload = function()
         document.getElementById("projekte").innerHTML += article;
         document.getElementById("content").innerHTML += "<li>" + project_list[k].titel + "</li>";
     }
-
+    check_login();
 }
 
 function setCount() {

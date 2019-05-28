@@ -28,43 +28,39 @@ let english ={
     details:"To project details"
 };
 
+let liststart= "<div style=\"margin-top: 10px\">";
+let listlink ="<a class=\"reg\" href=\"";
+let listdesc="\">";
+let listend="</a> </div>"
+
 var lang = navigator.language || navigator.userLanguage;
 console.log(lang);
 
-window.onload = function()
-{
+window.onload = function() {
     check_login();
-    if (lang.includes("de")){
-        document.body.children[1].children[0].children[0].children[1].innerHTML = german["project_overview"];
-        document.body.children[1].children[0].children[0].children[2].innerHTML = german["newArticle_menu"];
-        document.body.children[1].children[0].children[1].children[0].innerHTML = german["welcome_message"];
-        document.body.children[1].children[0].children[1].children[1].innerHTML = german["welcome_message_2"];
-        document.body.children[1].children[0].children[2].children[0].children[0].innerHTML = german["about"];
-        document.body.children[1].children[0].children[2].children[1].children[0].innerHTML = german["news"];
-        document.body.children[1].children[0].children[2].children[1].children[1].children[1].innerHTML = german["details"];
-        document.body.children[1].children[0].children[2].children[1].children[1].children[3].innerHTML = german["details"];
-        document.body.children[1].children[0].children[2].children[1].children[1].children[5].innerHTML = german["details"];
+    if (lang.includes("de")) {
+        document.getElementById("project_overview").innerHTML = german["project_overview"];
+        document.getElementById("newArticle_menu").innerHTML = german["newArticle_menu"];
+        document.getElementById("line1").innerHTML = german["welcome_message"];
+        document.getElementById("line2").innerHTML = german["welcome_message_2"];
+        document.getElementById("about").innerHTML = german["about"];
+        document.getElementById("news").innerHTML = german["news"];
 
         document.body.children[1].children[1].children[1].children[0].innerHTML = german["top"];
 
-    }
-    else if(lang.includes("en")){
-        document.body.children[1].children[0].children[0].children[1].innerHTML = english["project_overview"];
-        document.body.children[1].children[0].children[0].children[2].innerHTML = english["newArticle_menu"];
-        document.body.children[1].children[0].children[1].children[0].innerHTML = english["welcome_message"];
-        document.body.children[1].children[0].children[1].children[1].innerHTML = english["welcome_message_2"];
-        document.body.children[1].children[0].children[2].children[0].children[0].innerHTML = english["about"];
-        document.body.children[1].children[0].children[2].children[1].children[0].innerHTML = english["news"];
-        document.body.children[1].children[0].children[2].children[1].children[1].children[1].innerHTML = english["details"];
-        document.body.children[1].children[0].children[2].children[1].children[1].children[3].innerHTML = english["details"];
-        document.body.children[1].children[0].children[2].children[1].children[1].children[5].innerHTML = english["details"];
+    } else if (lang.includes("en")) {
+        document.getElementById("project_overview").innerHTML = english["project_overview"];
+        document.getElementById("newArticle_menu").innerHTML = english["newArticle_menu"];
+        document.getElementById("line1").innerHTML = english["welcome_message"];
+        document.getElementById("line2").innerHTML = english["welcome_message_2"];
+        document.getElementById("about").innerHTML = english["about"];
+        document.getElementById("news").innerHTML = english["news"];
 
         document.body.children[1].children[1].children[1].children[0].innerHTML = english["top"];
 
     }
 
-
-    document.body.children[1].children[0].children[2].children[1].children[1].children[0].innerHTML = (project_list[0].titel + "<br>" + project_list[0].kurzbeschreibung + "<br>");
-    document.body.children[1].children[0].children[2].children[1].children[1].children[2].innerHTML = (project_list[1].titel + "<br>" + project_list[1].kurzbeschreibung + "<br>");
-    document.body.children[1].children[0].children[2].children[1].children[1].children[4].innerHTML = (project_list[2].titel + "<br>" + project_list[2].kurzbeschreibung + "<br>");
+    for (let i = 0; i < project_list.length; i++) {
+        document.getElementById("projekt-liste").innerHTML += (liststart + project_list[i].titel + "<br>" + project_list[i].kurzbeschreibung +"<br>" + listlink + "Projekt1.html?_id=" + i + listdesc +"Zum Projekt"+listend+ "<br>")
+    }
 }
