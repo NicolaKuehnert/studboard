@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <script src="login.js"></script>
     <script src="script.js"></script>
     <script src="converter.js"></script>
     <script src="translator_projektuebersicht.js"></script>
@@ -26,17 +27,21 @@
         </picture>
     </section>
     <!--DONE Anmeldeformular -->
-    <div id="login">
-        <form action="http://localhost:63342/studboard/leereseite.html" method="POST"
-              enctype="application/x-www-form-urlencoded">
+    <div id="login" style="display: block;">
+        <form>
             Name <input type="text" name="username"/><br>
             Passwort <input type="password" name="password"><br>
 
-            <input type="submit" value="Submit"/>
+            <input type="submit" onclick="login()" value="Login"/>
         </form>
-
-
-        <br><a href="registrieren.html">Neu Registrieren</a>
+        <a class="reg" href="registrieren.html">Neu Registrieren</a>
+    </div>
+    <!--children 2 -->
+    <div id="logout" style="display: none;">
+        <form>
+            <input type="hidden" value="logout"/>
+            <input type="submit" onclick="logout()" value="Logout"/>
+        </form>
     </div>
 
 
@@ -55,14 +60,20 @@
 
 
         <!--children 1 -->
-        <ol>
+        <ol id="content">
             <h3>Inhalt</h3>
-            <li><a href="Projekt1.html">Projekt 1</a></li>
-            <li><a href="Projekt2.html">Projekt 2</a></li>
         </ol>
 
         <!--children 2 -->
-        <div class="projekte">
+        <div id="projekte">
+            <form>
+                <select name="Anzahl" id="count">
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+                <input type="submit" onclick="setCount()" value="Submit">
+            </form>
 
         </div>
     </div>

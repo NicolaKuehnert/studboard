@@ -7,27 +7,30 @@ function check_login() {
     console.log("Login");
     if (is_logged_in === "1"){
         console.log("off");
-        let in_button = document.body.children[0].children[1];
-        let out_button = document.body.children[0].children[2];
+        let in_button = document.getElementById("login");
+        let out_button = document.getElementById("logout");
         in_button.style.display = "none";
         out_button.style.display = "block";
     }  else if (is_logged_in === "0") {
         console.log("on");
-        let in_button = document.body.children[0].children[1];
-        let out_button = document.body.children[0].children[2];
+        let in_button = document.getElementById("login");
+        let out_button = document.getElementById("logout");
         in_button.style.display = "block";
         out_button.style.display = "none";
     }
 }
 
 function login() {
+    let username = document.getElementsByName("username")[0].value;
     is_logged_in = "1";
     localStorage.setItem("is_logged_in", is_logged_in);
+    localStorage.setItem("username", username);
 }
 
 function logout(){
     is_logged_in = "0";
     localStorage.setItem("is_logged_in", is_logged_in);
+    localStorage.removeItem("username");
 
 
 }

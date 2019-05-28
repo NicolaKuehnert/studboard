@@ -27,7 +27,9 @@ link="</p>\n" +
     "                    </div>\n" +
     "                    <footer><a href=\"";
 
-end="\">Footer</a></footer>\n" +
+footer_text = "\">";
+
+end="</a></footer>\n" +
     "\n" +
     "\n" +
     "                </article>\n" +
@@ -41,23 +43,29 @@ window.onload = function()
         document.body.children[1].children[0].children[0].children[1].innerHTML = german["project_overview"];
         document.body.children[1].children[0].children[0].children[2].innerHTML = german["new_project"];
         document.body.children[1].children[0].children[1].children[0].innerHTML = german["content"];
-        document.body.children[1].children[0].children[1].children[1].children[0].innerHTML = german["project"];
-        document.body.children[1].children[0].children[1].children[2].children[0].innerHTML = german["project"];
 
     }
     else if (lang.includes("en")){
         document.body.children[1].children[0].children[0].children[1].innerHTML = english["project_overview"];
         document.body.children[1].children[0].children[0].children[2].innerHTML = english["new_project"];
         document.body.children[1].children[0].children[1].children[0].innerHTML = english["content"];
-        document.body.children[1].children[0].children[1].children[1].children[0].innerHTML = english["project"];
-        document.body.children[1].children[0].children[1].children[2].children[0].innerHTML = english["project"];
 
     }
 
-    for (k=0; k<project_list.length; k++){
-        let article= (title + project_list[k].titel + body +project_list[k].kurzbeschreibung + link + "Projekt1.html" + end);
+    let count = parseInt(localStorage.getItem("count"));
+    if (count != null && count > 0){} else {count = 1}
 
-        document.body.children[1].children[0].children[2].innerHTML += article;
+    for (let k=0; k<count; k++){
+        let article= (title + project_list[k].titel + body +project_list[k].kurzbeschreibung + link + "Projekt1.html?_id="+ k + footer_text+ "Zur Projektseite" + end);
+
+        document.getElementById("projekte").innerHTML += article;
+        document.getElementById("content").innerHTML += "<li>" + project_list[k].titel + "</li>";
     }
 
+}
+
+function setCount() {
+    let node = document.getElementById("count");
+    let count = node.options[node.selectedIndex].text;
+    localStorage.setItem("count", count);
 }

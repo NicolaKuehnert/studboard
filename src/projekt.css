@@ -16,12 +16,16 @@ ol li:hover{
     width: 200px;
 }
 
+li{
+    margin: 2px;
+}
+
 .number{
     list-style-type: decimal;
 
 }
 
-.projekte{
+#projekte{
     margin-left: 200px;
     background-color: #003030;
     padding: 2px;
