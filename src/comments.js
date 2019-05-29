@@ -11,20 +11,22 @@ let json = JSON.parse(localStorage.getItem("project"+id));
 let project = new convertJSON(json).toObject();
 
 function saveComment() {
-    let text = document.getElementById("comment").value;
-    let note = document.getElementById("note");
-    let note_text = note.options[note.selectedIndex].text;
+    if(is_logged_in==="1"){
+        let text = document.getElementById("comment").value;
+        let note = document.getElementById("note");
+        let note_text = note.options[note.selectedIndex].text;
 
-    let comment = new Comments(id,text, note_text, localStorage.getItem("username"));
-    let json = new convertJSON(comment).toJSON();
-    localStorage.setItem(("comment"+i+id), JSON.stringify(json));
-    i++;
+        let comment = new Comments(id,text, note_text, localStorage.getItem("username"));
+        let json = new convertJSON(comment).toJSON();
+        localStorage.setItem(("comment"+i+id), JSON.stringify(json));
+        i++;
+    } else {
+        alert("Du muss angemeldet sein!");
+    }
+    window.location.replace(("Projekt1.html?_id="+id));
 }
 
 window.onload = function () {
-    document.getElementById("logout-form").setAttribute("action",("Projekt1.html?_id="+id));
-    document.getElementById("login-form").setAttribute("action",("Projekt1.html?_id="+id));
-    document.getElementById("comment-form").setAttribute("action",("Projekt1.html?_id="+id));
     loadComments();
     loadProject();
     let check = check_login();

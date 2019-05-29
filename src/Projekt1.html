@@ -24,20 +24,20 @@
         </picture>
     </section>
     <div id="login" style="display: block;">
-        <form id="login-form">
+
             Name <input type="text" name="username"/><br>
             Passwort <input type="password" name="password"><br>
 
             <input type="submit" onclick="login()" value="Login"/>
-        </form>
+
         <a class="reg" href="registrieren.html">Neu Registrieren</a>
     </div>
     <!--children 2 -->
     <div id="logout" style="display: none;">
-        <form id="logout-form">
+
             <input type="hidden" value="logout"/>
             <input type="submit" onclick="logout()" value="Logout"/>
-        </form>
+
     </div>
 </header>
 <div id="main-div">
@@ -91,7 +91,6 @@
             </article>
         </section>
 <section id="kommentare">
-    <form id="comment-form">
         Kommentar zum Projekt <br><textarea id="comment" type="text" name="Kommentar" value=""></textarea><br>
         <br>Note fürs Projekt
         <select name="note" id="note" size="1">
@@ -102,7 +101,7 @@
             <option value="5">5</option>
         </select>
         <br><button id="senden" onclick="saveComment()" value="Speichern" style="color: black">Speichern</button>
-    </form>
+
     <div id="comment_section"></div>
 </section>
 
