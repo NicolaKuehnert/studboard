@@ -60,7 +60,7 @@ window.onload = function() {
 
     }
 
-    for (let i = 0; i < project_list.length; i++) {
-        document.getElementById("projekt-liste").innerHTML += (liststart + project_list[i].titel + "<br>" + project_list[i].kurzbeschreibung +"<br>" + listlink + "Projekt1.html?_id=" + i + listdesc +"Zum Projekt"+listend+ "<br>")
+    for (let i = 0; i < 3; i++) {
+        document.getElementById("projekt-liste").innerHTML += (liststart + project_list[(project_list.length-(i+1))].titel + "<br>" + project_list[(project_list.length-(i+1))].kurzbeschreibung +"<br>" + listlink + "Projekt1.html?_id=" + i + listdesc +"Zum Projekt"+listend+ "<br>")
     }
 }
