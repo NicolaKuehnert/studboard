@@ -40,22 +40,23 @@ var lang = navigator.language || navigator.userLanguage;
 window.onload = function()
 {
     if (lang.includes("de")){
-        document.body.children[1].children[0].children[0].children[1].innerHTML = german["project_overview"];
-        document.body.children[1].children[0].children[0].children[2].innerHTML = german["new_project"];
-        document.body.children[1].children[0].children[1].children[0].innerHTML = german["content"];
+        document.getElementById("projectuebersicht").innerHTML = german["project_overview"];
+        document.getElementById("newArticle_menu").innerHTML = german["new_project"];
+        document.getElementById("heading").innerHTML = german["content"];
 
     }
     else if (lang.includes("en")){
-        document.body.children[1].children[0].children[0].children[1].innerHTML = english["project_overview"];
-        document.body.children[1].children[0].children[0].children[2].innerHTML = english["new_project"];
-        document.body.children[1].children[0].children[1].children[0].innerHTML = english["content"];
+        document.getElementById("projectuebersicht").innerHTML = english["project_overview"];
+        document.getElementById("newArticle_menu").innerHTML = english["new_project"];
+        document.getElementById("heading").innerHTML = english["content"];
 
     }
 
     let count = parseInt(localStorage.getItem("count"));
-    if (count != null && count > 0){} else {count = 1}
-
-    for (let k=0; k<count; k++){
+    if(count > project_list.length){count = project_list.length} else if(count > 0){} else {count = 1}
+    console.log(count);
+    for (let k=0; k<(count); k++){
+        console.log(project_list[k]);
         let article= (title + project_list[k].titel + body +project_list[k].kurzbeschreibung + link + "Projekt1.html?_id="+ k + footer_text+ "Zur Projektseite" + end);
 
         document.getElementById("projekte").innerHTML += article;

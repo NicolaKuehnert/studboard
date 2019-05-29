@@ -27,12 +27,13 @@ function login() {
     is_logged_in = "1";
     localStorage.setItem("is_logged_in", is_logged_in);
     localStorage.setItem("username", username);
+    window.location.replace(window.location.search.substring(1));
 }
 
 function logout(){
     is_logged_in = "0";
     localStorage.setItem("is_logged_in", is_logged_in);
     localStorage.removeItem("username");
-
+    window.location.replace(window.location.search.substring(1));
 
 }
