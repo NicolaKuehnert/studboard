@@ -194,8 +194,9 @@ p4 = new Project(
     ["Lauffähig"],
     3
 );
+let project_list =[p1,p2,p3,p4];
 
-project_list = [p1, p2, p3, p4];
+
 
 if(performance.navigation.type === 1){
     /*
@@ -203,24 +204,26 @@ if(performance.navigation.type === 1){
     und kann dann zurück zum richtigen Objekt-Typ konvertiert werden
     */
     json1 = JSON.parse(localStorage.getItem("user1"));
-    for (j = 0; j < localStorage.length; j++){
-        if (localStorage.getItem("project" +j)) {
-            project_list[j] = new convertJSON(JSON.parse(localStorage.getItem("project" +j))).toObject();
-
-        }
-    }
+    fillArray();
     console.log("Load from storage");
 
 } else {
     json1 = new convertJSON(u1).toJSON();
-    for (i = 0; i < project_list.length; i++){
+    for (let i = 0; i < project_list.length; i++){
         json2 = new convertJSON(project_list[i]).toJSON();
         console.log(json2);
         localStorage.setItem(("project" + i), JSON.stringify(json2));
     }
     localStorage.setItem("user1", JSON.stringify(json1));
-
+    fillArray();
     console.log("Save to storage");
 }
 u2 = new convertJSON(json1).toObject();
 
+function fillArray() {
+    for (let j = 0; j < localStorage.length; j++){
+        if (localStorage.getItem("project" +j)) {
+            project_list[j] = new convertJSON(JSON.parse(localStorage.getItem("project" +j))).toObject();
+        }
+    }
+}

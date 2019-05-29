@@ -30,6 +30,8 @@ function save() {
     let json = new convertJSON(article).toJSON();
 
     localStorage.setItem(("project"+id), JSON.stringify(json));
+    project_list.push(article);
+
 
     window.location.replace(("Projekt1.html?_id="+id));
 }
